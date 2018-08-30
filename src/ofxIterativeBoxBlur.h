@@ -235,7 +235,7 @@ protected:
 			{
 				blur_shader.begin();
 				blur_shader.setUniformTexture("tex", pingpong[index].front->getTextureReference(), 1);
-				blur_shader.setUniform2f("direction", 0, 1. / pingpong[index].front->getWidth());
+				blur_shader.setUniform2f("direction", 0, 1. / pingpong[index].front->getHeight());
 				pingpong[index].mesh.draw();
 				blur_shader.end();
 			}
